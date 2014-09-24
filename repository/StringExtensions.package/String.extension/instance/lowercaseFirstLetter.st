@@ -1,5 +1,8 @@
 *StringExtensions
 lowercaseFirstLetter
-	"Answer a String made up from the receiver whose first character is lowercase."
+	" Answer a String made up from the receiver whose first character is lowercase. "
 
-	^ self first asLowercase asString , self copy asString allButFirst
+	^ String streamContents: [ : stream |
+		stream 
+			nextPut: self first asLowercase;
+			nextPutAll: self copy asString allButFirst ]

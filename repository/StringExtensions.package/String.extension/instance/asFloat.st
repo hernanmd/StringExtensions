@@ -1,5 +1,5 @@
 *StringExtensions
 asFloat
-	"Answer a Float that represents the value of the receiver."
+	"Answer a <Float> that represents the value of the receiver."
 	
 	^ self asNumber asFloat
