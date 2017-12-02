@@ -1,6 +1,6 @@
 *StringExtensions
-indicesOfCharacter: aCharacter
-	" Given anAsciiInteger of a Character contained in the receiver, answer a Collection of positions where the Character is found "
+indexesOfCharacter: aCharacter
+	" Given aCharacter contained in the receiver, answer a <Collection> of positions where the aCharacter is found "
 	
 	| indices |
 

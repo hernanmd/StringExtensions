@@ -1,8 +1,8 @@
 *StringExtensions
 testWithoutBlanks
 
-	self assert: '3333' withoutBlanks = '3333'.
-	self assert: 'aa aa' withoutBlanks = 'aaaa'.
-	self assert: 'aaaa ' withoutBlanks = 'aaaa'.
-	self assert: ' aaaa' withoutBlanks = 'aaaa'.	
-	self assert: '' withoutBlanks = ''.
+	self assert: '3333' withoutBlanks equals: '3333'.
+	self assert: 'aa aa' withoutBlanks equals: 'aaaa'.
+	self assert: 'aaaa ' withoutBlanks equals: 'aaaa'.
+	self assert: ' aaaa' withoutBlanks equals: 'aaaa'.	
+	self assert: '' withoutBlanks equals: ''.
