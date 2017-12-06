@@ -1,5 +1,5 @@
 benchmarking
-benchLevPW1k
+benchLevPW1kWith
 
 	(self readWordsFile: 'words1000.txt') pairsDo: [ : wordA : wordB | 
-		wordA levenshteinDistance: wordB ]
+		wordA levenshteinDistanceWith: wordB ]
