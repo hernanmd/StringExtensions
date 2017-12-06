@@ -8,8 +8,10 @@ baseline02: spec
 		spec 
 			package: #StringExtensions;
 			package: #StringExtensionsBenchmarks;
+			package: #StringExtensionsLevenshtein;
 			package: #StringExtensionsTests.
 		spec 
 			group: 'All' with: #(#StringExtensionsTests #StringExtensionsBenchmarks #StringExtensions );
+			group: 'Benchmarks' with: #(#StringExtensionsLevenshtein #StringExtensionsBenchmarks #StringExtensions );
 			group: 'Core' with: #(#StringExtensions );
 			group: 'Tests' with: #(#StringExtensions #StringExtensionsTests ). ].
