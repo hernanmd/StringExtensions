@@ -1,0 +1,3 @@
+initializing
+nullString
+	^ String new.
