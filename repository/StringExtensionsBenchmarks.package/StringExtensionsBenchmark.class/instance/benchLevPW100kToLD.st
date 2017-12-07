@@ -1,5 +1,5 @@
 benchmarking
 benchLevPW100kToLD
 
-	(self readWordsFile: 'words.txt') pairsDo: [ : wordA : wordB | 
+	(self readWordsFile: self words100kFile) pairsDo: [ : wordA : wordB | 
 		(LevDistance onX: wordA onY: wordB) distance ]
