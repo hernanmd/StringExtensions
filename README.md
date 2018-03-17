@@ -3,6 +3,15 @@
 
 Add missing useful String extension method to Pharo String class.
 
+# Installation
+
+```smalltalk
+Metacello new
+	baseline: 'StringExtensions';
+	repository: 'github://hernanmd/StringExtensions/repository';
+	load.
+```
+
 # Details
 
 ## Extraction Methods
@@ -91,20 +100,6 @@ Cheap checking of beggining XML document, no parsing involved, just check '<?xml
 
 Uses **GZipConstants** gzipMagic to check if the received **String** conforms to GZip file format.
 
-# Installation
-
-## Stable version
-
-### Core group
-
-```smalltalk
-Metacello new 
-  smalltalkhubUser: 'hernan' 
-  project: 'StringExtensions';  
-  configuration: 'StringExtensions';  
-  version: #stable;  
-  load: 'Core'.
-```
 
 # License
 
