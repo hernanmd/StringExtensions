@@ -1,7 +1,95 @@
 
 # Description
 
-Adds missing useful String extension method to Pharo String class.
+Add missing useful String extension method to Pharo String class.
+
+# Details
+
+## Extraction Methods
+
+### findNumbers
+
+Extracting numbers in Strings is easily supported in Pharo:
+
+```smalltalk
+'Hola123Mundo' asInteger. "123"
+```
+
+However, consider the following:
+
+```smalltalk
+'Hola123Mundo234' asInteger. "123"
+```
+
+If we want to extract all numbers in the received **String**, then we could use #findNumbers:
+
+```smalltalk
+'Hola123Mundo234'  "an OrderedCollection('123' '234')"
+```
+
+- On empty **String**, answer an empty **Collection**
+- Negative Integers are extracted with sign: `'Hola-10' findNumbers. "an OrderedCollection('-10')"`
+- Floats are not supported: `'Hola30.6' findNumbers.  "an OrderedCollection('30' '6')"`
+
+### withoutBlanks
+
+Return a copy of the receiver with leading/trailing blanks removed and white spaces condensed.
+
+### withoutNumbers
+
+Reject all digits from the received **String**. Examples:
+
+```smalltalk
+'3333' withoutNumbers = ''.
+
+'aaaa' withoutNumbers = 'aaaa'.
+
+'aaa1234' withoutNumbers = 'aaa'.
+
+'' withoutNumbers = ''
+```
+
+## Conversion Methods
+
+### asCondensedString
+
+Return a copy of the receiver with leading/trailing blanks removed and white spaces condensed.
+
+### withoutCRs
+
+Return a copy of the receiver without carriage returns.
+
+## Testing Methods
+
+### includesBeginWith:
+
+Answer whether the parameter **String** begins like one of the receiver's sub strings elements. For example, the following expressions evaluate all to *true*:
+
+```smalltalk
+'Rose is a rose of splendor' includesBeginWith: 'rose'.
+
+'Rose is a rose of splendor' includesBeginWith: 'ROSE'.
+
+'Raise the art to resistance' includesBeginWith: 'resist'.
+
+'Danger dare to be grand' includesBeginWith: 'dar'.
+```
+
+### isAllLetters
+
+Answer *true* whether the receiver is composed entirely of letters.
+
+### isNumeric
+
+Answer whether the receiver is a **Number**. It uses a regular expression. 
+
+### isXML
+
+Cheap checking of beggining XML document, no parsing involved, just check '<?xml'.
+
+### isZipped
+
+Uses **GZipConstants** gzipMagic to check if the received **String** conforms to GZip file format.
 
 # Installation
 
@@ -16,41 +104,6 @@ Metacello new
   configuration: 'StringExtensions';  
   version: #stable;  
   load: 'Core'.
-```
-
-### All group: Core + Tests + Benchmarks
-
-```smalltalk
-Metacello new 
-  smalltalkhubUser: 'hernan' 
-  project: 'StringExtensions';  
-  configuration: 'StringExtensions';  
-  version: #stable;  
-  load.
-```
-
-## Development version
-
-### Core group
-
-```smalltalk
-Metacello new 
-  smalltalkhubUser: 'hernan' 
-  project: 'StringExtensions';  
-  configuration: 'StringExtensions';  
-  version: #development;  
-  load: 'Core'.
-```
-
-### All group: Core + Tests + Benchmarks
-
-```smalltalk
-Metacello new 
-  smalltalkhubUser: 'hernan' 
-  project: 'StringExtensions';  
-  configuration: 'StringExtensions';  
-  version: #development;  
-  load.
 ```
 
 # License
