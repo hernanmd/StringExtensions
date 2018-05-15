@@ -5,11 +5,33 @@ Add missing useful String extension method to Pharo String class.
 
 # Installation
 
+## Stable version (All group) from CLI
+
+Install **StringExtensions** from Command-Line Interface using [Pharo Instal](https://github.com/hernanmd/pi)l:
+
+```bash
+pi install StringExtensions
+```
+
+## Stable version from Pharo
+
+[//]: # (pi)
 ```smalltalk
 Metacello new
 	baseline: 'StringExtensions';
 	repository: 'github://hernanmd/StringExtensions/repository';
 	load.
+```
+
+## Baseline String
+
+If you want to add the ProjectFramework to your Metacello Baselines or Configurations, copy and paste the following expression:
+
+```smalltalk
+	" ... "
+		baseline: 'StringExtensions' 
+		with: [ spec repository: 'github://hernanmd/StringExtensions/repository' ].
+	" ... "
 ```
 
 # Details
