@@ -1,6 +1,7 @@
 *StringExtensionsTests
 testIndicesOfSubstring
 
+	self assert: ('NNNN' indicesOfSubstring: 'NN') asArray equals: #(1 2 3).
 	self assert: ('GATATATGCATATACTT' indicesOfSubstring: 'ATAT') asArray equals: #(2 4 10).
 	self assert: ('TTTTACACTTTTTTGTGTAAAAA' indicesOfSubstring: 'ACAC') asArray equals: #(5).
 	self assert: ('AAAGAGTGTCTGATAGCAGCTTCTGAACTGGTTACCTGCCGTGAGTAAATTAAATTTTATTGACTTAGGTCACTAAATACTTTAACCAATATAGGCATAGCGCACAGACAGATAATAATTACAGAGTACACAACATCCAT' indicesOfSubstring: 'AAA') asArray equals: #(1 47 52 75).

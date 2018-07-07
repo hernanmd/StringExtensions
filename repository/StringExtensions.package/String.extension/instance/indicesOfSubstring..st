@@ -1,6 +1,6 @@
 *StringExtensions
 indicesOfSubstring: subString
-	" Given aCharacter contained in the receiver, answer a <Collection> of positions where the aCharacter is found "
+	" Given aCharacter contained in the receiver, answer a <Collection> of positions where the aCharacter is found. Overlapping is NOT considered, i.e. : 'nnnn' indicesOfSubstring: 'nn' --> an OrderedCollection(1 2 3) "
 	
 	| indices i |
 
