@@ -6,7 +6,7 @@ indicesOfSubstringOverlaps: subString
 
 	indices := OrderedCollection new: self size.
 	i := 0.
-	[ (i := self findString: subString startingAt: i + 1) > 0 ] whileTrue: [ 
+	[ (i := self findString: subString startingAt: i + 1 caseSensitive: true) > 0 ] whileTrue: [ 
 		indices addLast: i.
 		i := i + 1 ].
 	^ indices
