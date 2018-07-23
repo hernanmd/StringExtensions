@@ -1,5 +1,5 @@
 *StringExtensions
-indexesOfCharacter: aCharacter
+indicesOfCharacter: aCharacter
 	" Given aCharacter contained in the receiver, answer a <Collection> of positions where the aCharacter is found "
 	
 	| indices |
