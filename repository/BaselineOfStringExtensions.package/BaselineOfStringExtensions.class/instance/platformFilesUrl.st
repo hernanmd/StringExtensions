@@ -1,5 +1,6 @@
 doits
 platformFilesUrl
+	" Private - See superimplementor's comment "
 
 	^ Array with: (String streamContents: [ : stream |		
 		stream 			
