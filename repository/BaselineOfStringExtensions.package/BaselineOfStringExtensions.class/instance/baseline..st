@@ -10,11 +10,11 @@ baseline: spec
 			yourself.	
 		
 		spec
-			package: #StringExtensions;							with: [ spec requires: #('FuzzySearcher') ];
+			package: #StringExtensions						with: [ spec requires: #('FuzzySearcher') ];
 			package: #StringExtensionsBenchmarks 			with: [ spec requires: #('SMark' ). ];
 			package: #StringExtensionsLevenshtein 			with: [ spec requires: #(#StringExtensions ). ];
-			package: #'StringExtensionsLevenshtein-Tests' with: [ spec requires: #(#StringExtensionsLevenshtein ). ];
-			package: #StringExtensionsTests 					with: [ spec requires: #(#StringExtensions ). ].
+			package: #'StringExtensionsLevenshtein-Tests' 	with: [ spec requires: #(#StringExtensionsLevenshtein ). ];
+			package: #StringExtensionsTests 				with: [ spec requires: #(#StringExtensions ). ].
 		spec 
 			group: 'All' 			with: #(#StringExtensionsTests #StringExtensionsBenchmarks #StringExtensions #'StringExtensionsLevenshtein-Tests' #StringExtensionsLevenshtein 'FuzzySearcher');
 			group: 'Benchmarks' 	with: #(#StringExtensionsLevenshtein #StringExtensionsBenchmarks #StringExtensions 'FuzzySearcher');
