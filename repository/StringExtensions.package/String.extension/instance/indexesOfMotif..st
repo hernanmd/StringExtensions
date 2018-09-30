@@ -9,7 +9,7 @@ indexesOfMotif: motif
 		((index := self indexOfSubCollection: motif startingAt: pos) > 0) 
 			ifTrue: [ 
 				indexes add: index.
-				pos := index + (motif size) ].
+				pos := index + motif size ].
 				(index ~= 0 and: [ pos <= (self size - motif size) ])
 	] whileTrue.
 	^ indexes
