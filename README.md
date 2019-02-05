@@ -1,19 +1,33 @@
 
+# Table of Contents
+
+- [Description](#description)
+- [Installation](#installation)
+  - [Install from CLI](#install-from-cli)
+  - [Install from Pharo](#install-from-pharo)
+  - [Baseline Snippet](#baseline-snippet)
+- [Details](#details)
+  - [Extraction Methods](#extraction-methods)
+  - [Conversion Methods](#conversion-methods)
+  - [Testing Methods](#testing-methods)
+- [Implementation notes](#implementation-note)
+- [License](#license)
+
 # Description
 
 Add missing useful String extension method to Pharo String class.
 
 # Installation
 
-## Stable version (All group) from CLI
+## Install from CLI
 
-Install **StringExtensions** from Command-Line Interface using [Pharo Instal](https://github.com/hernanmd/pi)l:
+Install **StringExtensions** from Command-Line Interface using [Pharo Install](https://github.com/hernanmd/pi):
 
 ```bash
 pi install StringExtensions
 ```
 
-## Stable version from Pharo
+## Install from Pharo
 
 [//]: # (pi)
 ```smalltalk
@@ -23,7 +37,7 @@ Metacello new
 	load.
 ```
 
-## Baseline String
+## Baseline Snippet
 
 If you want to add the ProjectFramework to your Metacello Baselines or Configurations, copy and paste the following expression:
 
@@ -35,6 +49,12 @@ If you want to add the ProjectFramework to your Metacello Baselines or Configura
 ```
 
 # Details
+
+To quickly find methods provided by this package, please evaluate:
+
+```smalltalk
+(String methods select: #isExtension) select: [ : p | p package name = 'StringExtensions' ]
+```
 
 ## Extraction Methods
 
@@ -127,7 +147,7 @@ Uses **GZipConstants** gzipMagic to check if the received **String** conforms to
 
 This software is licensed under the MIT License.
 
-Copyright Hernán Morales, 2018.
+Copyright Hernán Morales, 2018-2019
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
