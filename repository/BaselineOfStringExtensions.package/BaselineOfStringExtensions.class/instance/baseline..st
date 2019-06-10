@@ -7,8 +7,7 @@ baseline: spec
 		spec
 			baseline: 'FuzzySearch'			with: [ spec repository: 'github://hernanmd/FuzzySearcher/repository' ];
 			baseline: 'OrderedSet'			with: [ spec repository: 'github://hernanmd/OrderedSet/repository' ];
-			configuration: 'SMark' 			with: [ spec versionString: #stable; repository: 'http://smalltalkhub.com/mc/StefanMarr/SMark/main/' ];
-			yourself.	
+			configuration: 'SMark' 			with: [ spec versionString: #stable; repository: 'http://smalltalkhub.com/mc/StefanMarr/SMark/main/' ].	
 		
 		spec
 			package: #StringExtensions							with: [ spec requires: #('FuzzySearch' 'OrderedSet') ];
