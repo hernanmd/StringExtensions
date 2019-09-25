@@ -1,38 +1,11 @@
-"
-StringExtensionsBenchmark run: 5.
-
-Benchmark test data
-
-Test data files:
-https://raw.githubusercontent.com/andreaferretti/levenshtein/master/words1000.txt
-https://raw.githubusercontent.com/andreaferretti/levenshtein/master/words.txt
-
-Reference implementation:
-
-https://github.com/andreaferretti/levenshtein/blob/master/scala/src/main/scala/lev/enshtein/Levenshtein.scala
-
-
-Public API and Key Messages
-
-- message one   
-- message two 
-- (for bonus points) how to create instances.
-
-   One simple example is simply gorgeous.
- 
-Internal Representation and Key Implementation Points.
-
-
-    Implementation Points
-"
 Class {
 	#name : #StringExtensionsBenchmark,
-	#superclass : #SMarkSuite,
+	#superclass : #Object,
 	#instVars : [
 		'wordsFile1k',
 		'wordsFile100k'
 	],
-	#category : 'StringExtensionsBenchmarks-SMark'
+	#category : #'StringExtensionsBenchmarks-Core'
 }
 
 { #category : #benchmarking }
@@ -103,6 +76,13 @@ StringExtensionsBenchmark >> benchLevPW1kWith [
 
 	(self readWordsFile: self words1kFile) pairsDo: [ : wordA : wordB | 
 		wordA levenshteinDistanceWith: wordB ]
+]
+
+{ #category : #initialize }
+StringExtensionsBenchmark >> initialize [ 
+
+	" Download word files "
+	BaselineOfStringExtensions new preLoad.
 ]
 
 { #category : #private }
