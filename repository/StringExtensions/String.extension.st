@@ -150,6 +150,14 @@ String >> indicesOfSubstringOverlaps: subString [
 ]
 
 { #category : #'*StringExtensions' }
+String >> isAllBlanks [
+	"Answer <true> whether the receiver is composed entirely of space separators "
+	
+	^ self notEmpty and: [ self allSatisfy: #isSpaceSeparator ].
+
+]
+
+{ #category : #'*StringExtensions' }
 String >> isAllLetters [
 	"Answer <true> whether the receiver is composed entirely of letters "
 	

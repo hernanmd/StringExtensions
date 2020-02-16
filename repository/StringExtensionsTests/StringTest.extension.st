@@ -38,6 +38,24 @@ StringTest >> testCopyUpToStartParenthesis [
 ]
 
 { #category : #'*StringExtensionsTests' }
+StringTest >> testFindNumbers [
+
+	self assertCollection: '' findNumbers hasSameElements: #().
+	self assertCollection: 'hola' findNumbers hasSameElements: #().
+	self assertCollection: 'BuenosD1as' findNumbers hasSameElements: #('1').
+	self assertCollection: '1234' findNumbers hasSameElements: #('1234').
+	self assertCollection: '123 Prueba456' findNumbers hasSameElements: #('123' '456'). 
+	
+	
+
+	
+	
+	
+	
+	
+]
+
+{ #category : #'*StringExtensionsTests' }
 StringTest >> testHammingDistanceTo [
 
 	self assert: ('AAAA' hammingDistanceTo: 'TTTT') equals: 4.
@@ -134,6 +152,17 @@ StringTest >> testIndicesOfSubstringOverlaps [
 	
 	
 	
+]
+
+{ #category : #'*StringExtensionsTests' }
+StringTest >> testIsAllBlanks [
+
+	self deny: ' a ' isAllBlanks.
+	self assert: '   ' isAllBlanks.
+	self deny: '
+' isAllBlanks.
+	self deny: '' isAllBlanks.
+	self deny: 'abc567' isAllBlanks.
 ]
 
 { #category : #'*StringExtensionsTests' }
