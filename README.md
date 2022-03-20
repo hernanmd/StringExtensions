@@ -7,6 +7,7 @@
   - [Install from Pharo](#install-from-pharo)
   - [Baseline Snippet](#baseline-snippet)
 - [Details](#details)
+  - [Summary](#summary)
   - [Extraction Methods](#extraction-methods)
   - [Conversion Methods](#conversion-methods)
   - [Testing Methods](#testing-methods)
