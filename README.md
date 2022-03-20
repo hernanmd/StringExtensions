@@ -56,6 +56,37 @@ To quickly find methods provided by this package, please evaluate:
 (String methods select: #isExtension) select: [ : p | p package name = 'StringExtensions' ]
 ```
 
+## Summary
+
+|**Method**|**Purpose**|
+|asCondensedString|Return a copy of the receiver with leading/trailing blanks removed and white spaces condensed|
+|asFloat|Answer a <Float> that represents the value of the receiver|
+|beginsWith:or:|Answer <true> if receiver's begins with firstPrefix or secondPrefix|
+|copyUpToAny:|Answer a <String> discarding all elements in the receiver which appear after any of of the elements in aCollection|
+|copyUpToStartParenthesis|Answer the receiver without preserving all Character's up to the first opening parenthesis|
+|findNumbers|Answer a <Collection> of numbers, removing other characters|
+|hammingDistanceTo:|Answer a <Number> respresenting the minimum amount of substitutions to convert the receiver into aString|
+|includesBeginWith:|Answer whether aString begins like one of the receiver's sub strings elements|
+|includesEndsWith:|Answer whether aString ends like one of the receiver's sub strings elements|
+|indexesOfMotif:|Answer a <Collection> of indexes of a motif in a string|
+|indicesOfCharacter:|Given aCharacter contained in the receiver, answer a <Collection> of positions where the aCharacter is found|
+|indicesOfSubstring:|Given aCharacter contained in the receiver, answer a <Collection> of positions where the aCharacter is found|
+|indicesOfSubstring:mismatches:|Answer a <Collection> of start positions where subString is found allowing at most d mismatches|
+|indicesOfSubstringOverlaps:|Given aCharacter contained in the receiver, answer a <Collection> of positions where the aCharacter is found|
+|isAllBlanks|Answer <true> whether the receiver is composed entirely of space separators|
+|isAllLetters|Answer <true> whether the receiver is composed entirely of letters|
+|isNumeric|Answer whether the receiver is a Number|
+|isXML|Only answer <true> when the receiver's contents *looks like* XML, not performing any validity check|
+|isZipped|Answer <true> if receiver conforms to GZIP file format|
+|levenshteinDistanceTo:|Iterative calculation of the Levenshtein distance between two strings|
+|lowercaseFirstLetter|Answer a String made up from the receiver whose first character is lowercase|
+|shingle:|Answer an <OrderedSet> with contiguous sequences (shingles) of n characters|
+|shingleMax:|Answer an maximally shingled <Set> with contiguous sequences (shingles) of n characters|
+|shingleWords:|Word shingling|
+|withoutBlanks|Return a copy of the receiver with leading/trailing blanks removed and white spaces condensed|
+|withoutCRs|Answer the receiver without carriage returns|
+|withoutNumbers|Return a copy of the receiver with numbers removed|
+	
 ## Extraction Methods
 
 ### findNumbers
