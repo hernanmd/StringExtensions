@@ -23,8 +23,24 @@ String >> beginsWith: firstPrefix or: secondPrefix [
 ]
 
 { #category : #'*StringExtensions' }
+String >> copyUpToAny: aCollection [ 
+	"Answer a <String> discarding all elements in the receiver which appear after any of of the elements in aCollection.
+	
+	'This is a test*discarded' copyUpToAny: { $* }. 'This is a test'
+	'This is a test,discard text' copyUpToAny: { $* . $, }. 'This is a test'
+	"
+
+	| result |
+	
+	result := self copy.
+	aCollection do: [ : startDiscardChar |
+		result := result copyUpTo: startDiscardChar ].
+	^ result
+]
+
+{ #category : #'*StringExtensions' }
 String >> copyUpToStartParenthesis [
-	" Answer the receiver without preserving all Character's up to the first opening parenthesis
+	" Answer the receiver without preserving all Character's up to the first opening parenthesis.
 
 	'this is a (test)' withoutParenthesis -> 'this is a '
 	'this is another (test) (with several) parenthesis' -> 'this is another'
