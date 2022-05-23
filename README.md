@@ -35,12 +35,12 @@ EpMonitor disableDuring: [
 	Metacello new
 		baseline: 'StringExtensions';
 		repository: 'github://hernanmd/StringExtensions/repository';
-		load ]
+		load ].
 ```
 
 ## Baseline Snippet
 
-If you want to add the ProjectFramework to your Metacello Baselines or Configurations, copy and paste the following expression:
+If you want to add it to your Metacello Baseline, copy and paste the following expression:
 
 ```smalltalk
 	" ... "
