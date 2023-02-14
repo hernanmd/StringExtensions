@@ -5,7 +5,7 @@ See https://github.com/hernanmd/StringExtensions for details.
 Class {
 	#name : #BaselineOfStringExtensions,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfStringExtensions'
+	#category : #BaselineOfStringExtensions
 }
 
 { #category : #baseline }
@@ -15,7 +15,7 @@ BaselineOfStringExtensions >> baseline: spec [
 	spec for: #'common' do: [
 		spec
 			baseline: 'FuzzySearch'			with: [ spec repository: 'github://hernanmd/FuzzySearcher/repository' ];
-			baseline: 'OrderedSet'			with: [ spec repository: 'github://hernanmd/OrderedSet/repository' ].
+			baseline: 'ContainersOrderedSet' with: [ spec repository: 'github://pharo-containers/Containers-OrderedSet:v1.0/src' ].
 		spec
 			package: #StringExtensions							with: [ spec requires: #('FuzzySearch' 'OrderedSet') ];
 			package: #StringExtensionsBenchmarks;

@@ -259,7 +259,7 @@ String >> shingle: n [
 
 	^ (1 to: self size - n + 1) 
 			collect: [ : i | self copyFrom: i to: i + n - 1 ] 
-			as: OrderedSet.
+			as: CTOrderedSet.
 ]
 
 { #category : #'*StringExtensions' }
