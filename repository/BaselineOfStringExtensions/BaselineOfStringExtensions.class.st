@@ -17,16 +17,16 @@ BaselineOfStringExtensions >> baseline: spec [
 			baseline: 'FuzzySearch'			with: [ spec repository: 'github://hernanmd/FuzzySearcher/repository' ];
 			baseline: 'ContainersOrderedSet' with: [ spec repository: 'github://pharo-containers/Containers-OrderedSet:v1.0/src' ].
 		spec
-			package: #StringExtensions							with: [ spec requires: #('FuzzySearch' 'OrderedSet') ];
+			package: #StringExtensions							with: [ spec requires: #('FuzzySearch' 'ContainersOrderedSet') ];
 			package: #StringExtensionsBenchmarks;
 			package: #StringExtensionsLevenshtein 			with: [ spec requires: #(#StringExtensions ). ];
 			package: #'StringExtensionsLevenshtein-Tests' 	with: [ spec requires: #(#StringExtensionsLevenshtein ). ];
 			package: #StringExtensionsTests 					with: [ spec requires: #(#StringExtensions ). ].
 		spec 
 			group: 'default'		with: #(#Core);
-			group: 'All' 			with: #(#StringExtensionsTests #StringExtensions #'StringExtensionsLevenshtein-Tests' #StringExtensionsLevenshtein 'FuzzySearch' 'OrderedSet');
+			group: 'All' 			with: #(#StringExtensionsTests #StringExtensions #'StringExtensionsLevenshtein-Tests' #StringExtensionsLevenshtein 'FuzzySearch' 'ContainersOrderedSet');
 			group: 'Benchmarks' 	with: #(#StringExtensionsLevenshtein #StringExtensionsBenchmarks #StringExtensions 'FuzzySearch');
-			group: 'Core' 			with: #(#StringExtensions 'FuzzySearch' 'OrderedSet');
+			group: 'Core' 			with: #(#StringExtensions 'FuzzySearch' 'ContainersOrderedSet');
 			group: 'Tests' 			with: #(#StringExtensions #StringExtensionsTests #StringExtensionsLevenshtein #'StringExtensionsLevenshtein-Tests' 'FuzzySearch') ].
 
 ]
